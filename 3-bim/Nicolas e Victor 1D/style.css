@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+header {
+    background-color: #146b2e;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+.bolas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.produto {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px gray;
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    margin-top: 15px;
+}
+
+.preco {
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.botao,
+button {
+    background-color: #146b2e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover,
+.botao:hover {
+    background-color: #0d4820;
+}
+
+.sobre {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.sobre p {
+    margin: 20px;
+}
+
+footer {
+    background-color: #146b2e;
+    color: white;
+    padding: 15px;
+}
