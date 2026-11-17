@@ -1,0 +1,431 @@
+root {
+  --fundo: #111111;
+  --card: #222222;
+  --amarelo: #ffcc00;
+  --vermelho: #e52b32;
+  --texto: #ffffff;
+  --cinza: #bbbbbb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  background: #191919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 7%;
+  border-bottom: 2px solid var(--amarelo);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--amarelo);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--amarelo);
+}
+
+.botao {
+  display: inline-block;
+  background: var(--amarelo);
+  border: none;
+  color: #111;
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.botao:hover {
+  background: #e8b900;
+  transform: translateY(-2px);
+}
+
+.botao.secundario {
+  background: #353535;
+  color: white;
+}
+
+.botao.verde {
+  background: #20b45a;
+  color: white;
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding: 80px 7%;
+  background: linear-gradient(125deg, #191919, #67161a);
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.1;
+  color: var(--amarelo);
+  margin: 18px 0;
+}
+
+.hero p {
+  color: #eeeeee;
+  margin-bottom: 25px;
+  font-size: 19px;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px #0007;
+}
+
+.etiqueta {
+  background: #e52b32;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.secao {
+  padding: 65px 7%;
+}
+
+.secao h2 {
+  color: var(--amarelo);
+  margin-bottom: 15px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 38px;
+  color: var(--amarelo);
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--cinza);
+  margin: 12px 0 35px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.produto {
+  background: var(--card);
+  border: 1px solid #343434;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  border-color: var(--amarelo);
+}
+
+.produto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.produto-info {
+  padding: 22px;
+}
+
+.produto h3 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.produto p {
+  color: var(--cinza);
+  min-height: 75px;
+}
+
+.preco {
+  display: block;
+  color: var(--amarelo);
+  font-size: 27px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.produto .botao {
+  width: 100%;
+}
+
+.centro {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.faixa {
+  background: var(--vermelho);
+  padding: 60px 7%;
+  text-align: center;
+}
+
+.faixa h2 {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.faixa h3 {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.faixa p {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.filtro {
+  background: #303030;
+  border: 1px solid #555;
+  border-radius: 30px;
+  color: white;
+  padding: 11px 20px;
+}
+
+.filtro.ativo,
+.filtro:hover {
+  background: var(--amarelo);
+  color: #111;
+  border-color: var(--amarelo);
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.painel {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 15px;
+  border: 1px solid #373737;
+}
+
+.painel h2 {
+  color: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.item-sacola {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid #444;
+}
+
+.item-sacola h3 {
+  font-size: 17px;
+}
+
+.item-sacola p {
+  color: var(--amarelo);
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.quantidade button {
+  background: #444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  width: 32px;
+  height: 32px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 22px;
+  padding: 25px 0;
+}
+
+.total strong {
+  color: var(--amarelo);
+}
+
+form label {
+  display: block;
+  margin: 17px 0 6px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #303030;
+  color: white;
+  padding: 13px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  margin-top: 25px;
+}
+
+.nota {
+  color: var(--cinza);
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.sobre-pagina {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.sobre-pagina img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 30px 0;
+}
+
+.sobre-pagina p {
+  margin-bottom: 20px;
+  color: #dddddd;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  background: #080808;
+  padding: 30px;
+  color: #aaaaaa;
+}
+
+/* Mantém o endereço oculto na retirada */
+[hidden] {
+  display: none !important;
+}
+
+/* Layout para celulares */
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 6%;
+    text-align: center;
+  }
+
+  .hero img {
+    max-height: 300px;
+  }
+
+  .secao {
+    padding: 45px 6%;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+
+  .painel {
+    padding: 20px;
+  }
+}
+    
