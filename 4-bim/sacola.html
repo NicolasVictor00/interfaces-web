@@ -1,0 +1,80 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha Sacola | ChiqueBurguer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html"> CHIQUEBURGUER</a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="sacola.html"> Sacola (<span class="contador">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="secao">
+    <h1 class="titulo"> Minha Sacola</h1>
+    <p class="subtitulo">Confira seu pedido antes de finalizar.</p>
+
+    <div class="checkout">
+      <div class="painel">
+        <h2>Seus produtos</h2>
+        <div id="itensSacola"></div>
+        <div class="total">
+          <span>Subtotal</span>
+          <strong id="valorTotal">R$ 0,00</strong>
+        </div>
+        <a class="botao secundario" href="cardapio.html">
+          + ADICIONAR MAIS PRODUTOS
+        </a>
+      </div>
+
+      <div class="painel">
+        <h2>Finalizar pedido</h2>
+
+        <form id="formPedido">
+          <label for="nome">Seu nome</label>
+          <input id="nome" type="text" required
+                 placeholder="Seu nome completo">
+
+          <label for="tipoEntrega">Como deseja receber?</label>
+          <select id="tipoEntrega" onchange="alternarEntrega()">
+            <option value="retirada">Retirar na lanchonete</option>
+            <option value="entrega">Receber em casa</option>
+          </select>
+
+          <div id="campoEndereco" hidden>
+            <label for="endereco">Endereço completo</label>
+            <input id="endereco" type="text"
+                   placeholder="Rua, número, bairro e cidade">
+          </div>
+
+          <label for="pagamento">Pagamento</label>
+          <select id="pagamento">
+            <option value="Pix">Pix</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão">Cartão</option>
+          </select>
+
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" rows="3"
+                    placeholder="Ex.: Sem cebola"></textarea>
+
+          <button class="botao verde" type="submit">
+            FINALIZAR PELO WHATSAPP
+          </button>
+        </form>
+        <p class="nota">Taxa de entrega, disponibilidade e pagamento serão confirmados pela lanchonete.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 CiqueBurguer</footer>
+</body>
+</html>
