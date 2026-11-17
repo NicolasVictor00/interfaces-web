@@ -1,0 +1,55 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChiqueBurguer | Início</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html"> CHIQUEBURGUER</a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="sacola.html"> Sacola (<span class="contador">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-conteudo">
+        <span class="etiqueta"> Sabor de verdade</span>
+        <h1>O sabor que conquista a cada mordida.</h1>
+        <p>Hambúrgueres suculentos, batatas irresistíveis e bebidas geladas.</p>
+        <a href="cardapio.html" class="botao">VER CARDÁPIO</a>
+      </div>
+      <img src="Chiquelogo.jpeg" width="600" height="00" alt="Hambúrguer da ChiqueBurguer">
+    </section>
+
+    <section class="secao">
+      <h2>Os favoritos da CiqueBurguer</h2>
+      <p class="subtitulo">Escolha, adicione à sacola e peça pelo WhatsApp.</p>
+      <div id="destaques" class="produtos"></div>
+      <div class="centro">
+        <a class="botao" href="cardapio.html">VER TODOS OS PRODUTOS</a>
+      </div>
+    </section>
+
+    <section class="faixa">
+      <h2>Combo especial</h2>
+      <p>Hambúrguer + batata + refrigerante</p>
+      <h3>R$ 32,90</h3>
+      <button class="botao" onclick="adicionar(6)">
+        ADICIONAR COMBO
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ChiqueBurguer — Feito com muito sabor.</p>
+  </footer>
+</body>
+</html>
